@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E1D2C711FA255FC004C9A03 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E1D2C701FA255FC004C9A03 /* Alamofire.framework */; };
 		5E7DF6731FA23555006356A5 /* HelpScout_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E7DF6691FA23555006356A5 /* HelpScout_iOS.framework */; };
 		5E7DF6781FA23555006356A5 /* HelpScoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7DF6771FA23555006356A5 /* HelpScoutTests.swift */; };
 		5E7DF67A1FA23555006356A5 /* HelpScout.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E7DF66C1FA23555006356A5 /* HelpScout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5E7DF68B1FA24960006356A5 /* HelpScout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7DF68A1FA24960006356A5 /* HelpScout.swift */; };
 		5E7DF68F1FA24B9B006356A5 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7DF68E1FA24B9B006356A5 /* String.swift */; };
 		5E7DF6931FA24C1F006356A5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7DF6921FA24C1F006356A5 /* API.swift */; };
-		5E7DF6961FA24CBE006356A5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E7DF6951FA24CBE006356A5 /* Alamofire.framework */; };
 		5E7DF6981FA24FAB006356A5 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7DF6971FA24FAB006356A5 /* Result.swift */; };
 		5E7DF69C1FA25103006356A5 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7DF69B1FA25103006356A5 /* Device.swift */; };
 /* End PBXBuildFile section */
@@ -29,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E1D2C701FA255FC004C9A03 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		5E7DF6691FA23555006356A5 /* HelpScout_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HelpScout_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E7DF66C1FA23555006356A5 /* HelpScout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelpScout.h; sourceTree = "<group>"; };
 		5E7DF66D1FA23555006356A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E7DF6961FA24CBE006356A5 /* Alamofire.framework in Frameworks */,
+				5E1D2C711FA255FC004C9A03 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +125,7 @@
 		5E7DF6941FA24CBE006356A5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5E1D2C701FA255FC004C9A03 /* Alamofire.framework */,
 				5E7DF6951FA24CBE006356A5 /* Alamofire.framework */,
 			);
 			name = Frameworks;
@@ -393,7 +395,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/HelpScout/Config/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -420,7 +422,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/HelpScout/Config/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
