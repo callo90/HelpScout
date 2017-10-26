@@ -1,0 +1,11 @@
+framework module HelpScout {
+  umbrella header "HelpScout.h"
+
+  export *
+  module * { export * }
+}
+
+module HelpScout.Swift {
+    header "HelpScout-Swift.h"
+    requires objc
+}
