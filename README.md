@@ -18,7 +18,7 @@ $ brew install carthage
 To integrate HelpScout into your Xcode project using Carthage, add this to your `Cartfile`:
 
 ```ogdl
-github "koombea/HelpScout" ~> 4.5
+github "koombea/HelpScout" ~> 1.0
 ```
 
 Run `carthage update` to build the framework and drag the built `HelpScout.framework` into your Xcode project.
