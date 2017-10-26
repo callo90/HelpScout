@@ -52,7 +52,9 @@ struct ConversationStore {
     static func create(email: String, firstName: String, lastName: String, body: String,
                        completion: @escaping (Result<Any?>) -> ()) {
         guard let config = HelpScout.config else {
-            print(HelpScoutError.notConfigured.localizedDescription)
+            let error = HelpScoutError.notConfigured
+            print(error.localizedDescription)
+            completion(Result.failure(error))
             return
         }
         let formatter = DateFormatter()

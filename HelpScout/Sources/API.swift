@@ -13,7 +13,9 @@ struct API {
     static func request(_ url: URLConvertible, method: Alamofire.HTTPMethod = .get, parameters: Parameters? = nil,
                         completion: @escaping (Result<Any?>) -> ()) {
         guard let config = HelpScout.config else {
-            print(HelpScoutError.notConfigured.localizedDescription)
+            let error = HelpScoutError.notConfigured
+            print(error.localizedDescription)
+            completion(Result.failure(error))
             return
         }
         Alamofire.request(url, method: method, parameters: parameters, encoding: JSONEncoding.default)
