@@ -23,3 +23,20 @@ github "koombea/HelpScout" ~> 1.0
 
 Run `carthage update` to build the framework and drag the built `HelpScout.framework` into your Xcode project.
 
+## Usage
+
+### Configuration
+
+Add following Help Scout initialization code to your AppDelegate.
+
+```swift
+HelpScout.configure(mailboxID: <# Mailbox ID #>, token: "<# User Token #>")
+```
+
+### Conversations
+
+To create a support request use HelpScout.createConversation with the required parameters:
+
+```swift
+HelpScout.createConversation(email: <# email #>, firstName: <# firstName #>, lastName: <# lastName #>, body: <# body #>)
+```
