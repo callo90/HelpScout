@@ -17,14 +17,15 @@ extension String {
     }
     
     var appendingMetaData: String {
-        var deviceInfo = "\(self)\n\nApp Version: \(versionString)\nDevice Information:\n"
-        deviceInfo.append("Device: \(UIDevice.current.modelIdentifier)\n")
-        deviceInfo.append("\(UIDevice.current.systemName) Version: \(UIDevice.current.systemVersion)\n")
-        let languageDescription = Locale.current.localizedString(forIdentifier: Locale.current.identifier) ?? "?"
         let languageCode = Locale.current.languageCode ?? "?"
         let regionCode = Locale.current.regionCode ?? "?"
-        deviceInfo.append("Language: \(languageCode)-\(regionCode) (\(languageDescription))\n")
-        deviceInfo.append("Timezone: \(TimeZone.current.abbreviation() ?? "?")\n")
+        let languageDescription = Locale.current.localizedString(forIdentifier: Locale.current.identifier) ?? "?"
+        
+        var deviceInfo = "App Version: " + versionString + "\n"
+        deviceInfo += "Device: \(UIDevice().modelName)\n"
+        deviceInfo += "iOS: \(UIDevice.current.systemVersion)\n"
+        deviceInfo += "Language: \(languageCode)-\(regionCode) (\(languageDescription))\n"
+        deviceInfo += "Timezone: \(TimeZone.current.abbreviation() ?? "?")\n"
         return deviceInfo
     }
     

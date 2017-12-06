@@ -16,6 +16,8 @@
 		5E7DF6931FA24C1F006356A5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7DF6921FA24C1F006356A5 /* API.swift */; };
 		5E7DF6981FA24FAB006356A5 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7DF6971FA24FAB006356A5 /* Result.swift */; };
 		5E7DF69C1FA25103006356A5 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7DF69B1FA25103006356A5 /* Device.swift */; };
+		ED1373FB1FD74DF00009CE23 /* HelpScoutUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1373FA1FD74DF00009CE23 /* HelpScoutUser.swift */; };
+		ED77DB291FD5F33700BC8F59 /* HelpScoutAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED77DB281FD5F33700BC8F59 /* HelpScoutAttachment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,9 +41,10 @@
 		5E7DF68A1FA24960006356A5 /* HelpScout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpScout.swift; sourceTree = "<group>"; };
 		5E7DF68E1FA24B9B006356A5 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		5E7DF6921FA24C1F006356A5 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		5E7DF6951FA24CBE006356A5 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Frameworks/Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		5E7DF6971FA24FAB006356A5 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		5E7DF69B1FA25103006356A5 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		ED1373FA1FD74DF00009CE23 /* HelpScoutUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpScoutUser.swift; sourceTree = "<group>"; };
+		ED77DB281FD5F33700BC8F59 /* HelpScoutAttachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpScoutAttachment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				5E7DF6971FA24FAB006356A5 /* Result.swift */,
 				5E7DF68E1FA24B9B006356A5 /* String.swift */,
 				5E7DF69B1FA25103006356A5 /* Device.swift */,
+				ED77DB281FD5F33700BC8F59 /* HelpScoutAttachment.swift */,
+				ED1373FA1FD74DF00009CE23 /* HelpScoutUser.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -126,7 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				5E1D2C701FA255FC004C9A03 /* Alamofire.framework */,
-				5E7DF6951FA24CBE006356A5 /* Alamofire.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -242,11 +246,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED77DB291FD5F33700BC8F59 /* HelpScoutAttachment.swift in Sources */,
 				5E7DF68F1FA24B9B006356A5 /* String.swift in Sources */,
 				5E7DF6931FA24C1F006356A5 /* API.swift in Sources */,
 				5E7DF6981FA24FAB006356A5 /* Result.swift in Sources */,
 				5E7DF68B1FA24960006356A5 /* HelpScout.swift in Sources */,
 				5E7DF69C1FA25103006356A5 /* Device.swift in Sources */,
+				ED1373FB1FD74DF00009CE23 /* HelpScoutUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +405,7 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/HelpScout/Config/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.koombea.HelpScout;
 				PRODUCT_NAME = HelpScout;
@@ -426,6 +433,7 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/HelpScout/Config/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.koombea.HelpScout;
 				PRODUCT_NAME = HelpScout;
