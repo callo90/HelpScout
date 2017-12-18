@@ -67,8 +67,9 @@ struct ConversationStore {
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
         formatter.timeZone = TimeZone(secondsFromGMT: 0)
         let createdAt = formatter.string(from: Date())
-        var body = "User: \(user.id)\n"
-        body += body.appendingMetaData
+        var fullbody = "User: \(user.id)\n"
+        fullbody += "\(fullbody.appendingMetaData)\n"
+        fullbody += body
         
         var thread: [String : Any] = [
             "type": "customer",
@@ -78,7 +79,7 @@ struct ConversationStore {
                 "firstName": "\(user.firstName)",
                 "lastName": "\(user.lastName)"
             ],
-            "body": "\(body)",
+            "body": "\(fullbody)",
             "status": "active",
             "createdAt": "\(createdAt)",
         ]
