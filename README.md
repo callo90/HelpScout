@@ -18,7 +18,7 @@ $ brew install carthage
 To integrate HelpScout into your Xcode project using Carthage, add this to your `Cartfile`:
 
 ```ogdl
-github "koombea/HelpScout" ~> 1.0
+github "koombea/HelpScout" ~> 1.1
 ```
 
 Run `carthage update` to build the framework and drag the built `HelpScout.framework` into your Xcode project.
@@ -33,10 +33,36 @@ Add following Help Scout initialization code to your AppDelegate.
 HelpScout.configure(mailboxID: <# Mailbox ID #>, token: "<# User Token #>")
 ```
 
+### Users
+
+Create a user
+
+```swift
+HelpScoutUser(id: <# String #>, firstName: <# String #>, lastName: <# String #>, email: <# String #>)
+
+```
+
+### Attachments
+
+Create an attachment
+
+```swift
+HelpScoutAttachment(fileName: <# String #>, mimeType: <# String #>, data: <# Data #>)
+
+```
+
 ### Conversations
 
 To create a support request use HelpScout.createConversation with the required parameters:
 
+Sending with Attachment:
+
 ```swift
-HelpScout.createConversation(email: <# email #>, firstName: <# firstName #>, lastName: <# lastName #>, body: <# body #>)
+HelpScout.createConversation(user: <# HelpScoutUser #>, body: <# String #>, attachment: <# HelpScoutAttachment #>, completion: <# (Result<Any?>) -> () #>)
+```
+
+Sending without Attachment:
+
+```swift
+HelpScout.createConversation(user: <# HelpScoutUser #>, body: <# String #>, completion: <# (Result<Any?>) -> () #>)
 ```
